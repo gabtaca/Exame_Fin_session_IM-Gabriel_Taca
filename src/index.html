@@ -7,22 +7,32 @@
   <title>exam IM</title>
 </head>
 
-<body id="body" class="bg-cyan-200">
-  <header class="flex flex-col w-full py-10 pl-10 justify-center bg-black text-white">
-    <h1 class="font-bold text-xl py-5">Problème</h1>
+<body id="body" class="bg-cyan-200 ">
+  <header class="flex flex-col  w-full py-10 pl-10 justify-center bg-black text-white">
+    <h1 class="font-bold text-xl py-5 ml-[-1rem]">Changement d'approche pour effectuer le travail</h1>
     <ul class="list-disc">
-      <li >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, porro.</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, porro.</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, porro.</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, porro.</li>
+      <li class="font-bold list-none ml-[-1rem]">Écouter la vidéo au complet attentivement, établir un plan et monter une liste de tâches:</li>
+      <li>Reproduire le layout et la grid
+        <ul class="text-white list-disc ml-[1rem]">
+          <li>Header</li>
+          <li>Bouton de switch</li>
+          <li>Appliquer les styles sur la page, boutton et les cards</li>
+          <li>Simuler les divs pour créer la grid</li>
+          <li>Construire la grid et faire les breakpoints 1-col md-2 cols lg-3 cols xl-4 cols</li>
+        </ul>
+      </li>
+      <li>Construire la classe et générer les objets cards qui seront de 200px/200px jusqu'aux breakpoints lg et xl où ils seront de 300px/300px</li>
+      <li>S'assurer que la grid fonctionne et que le bouton reste au premier row</li>
+      <li>Faire le code qui gère le changement de couleur au toggle du bouton</li>
+      <li>Appliquer quelques règles de style pour mettre ca beau</li>
     </ul>
   </header>
-  <main class="m-auto w-[60%]">
-    <button id="toggleButton" class="flex float-right bg-black rounded-md text-white py-2 px-2">Switch Color</button>
-    <div class="container grid grid-cols-4">
-      <div class="bg-black w-[300px] h-[300px]" id="card"></div>
-    </div>
-
+  <main class="flex justify-center">
+      <div id="cards__container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-0 pt-10  gap-10">
+        <nav class="flex justify-center row-span-1 md:col-span-2 lg:block lg:col-span-3 xl:col-span-4">
+          <button id="toggleButton" class="flex float-right justify-center w-full lg:w-[10rem] bg-black rounded-md text-white py-2 px-2 ">Switch Color</button>
+        </nav>
+      </div>
   </main>
   <footer class="">
     <p>&copy; 2024 Gabriel Taca.</p>
