@@ -5,7 +5,7 @@ import '../css/style.css'
 
 class Card {
   /**
-   * Constructor for the Card class
+   * 
    * @param {string} numero 
    * @param {string} mobile 
    * @param {string} desktop 
