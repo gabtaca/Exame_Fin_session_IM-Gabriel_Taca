@@ -5,7 +5,7 @@ import '../css/style.css'
 
 class Card {
   /**
-   * Constructor for the Card class
+   * 
    * @param {string} numero 
    * @param {string} mobile 
    * @param {string} desktop 
@@ -44,7 +44,6 @@ class Card {
 
 const cardsContainer = document.getElementById('cards__container');
 
-// Define the cards data
 const cards = [
   new Card ('1', '300px / 300px', '200px / 200px'),
   new Card ('2', '300px / 300px', '200px / 200px'),
