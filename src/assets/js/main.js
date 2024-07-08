@@ -10,10 +10,10 @@ class Card {
    * @param {string} mobile 
    * @param {string} desktop 
    */
-  constructor(numero, mobile, largeur) {
+  constructor(numero, mobile, desktop) {
     this.numero = numero;
     this.mobile = mobile;
-    this.largeur = largeur;
+    this.largeur = desktop;
   }
 
   /**
@@ -24,11 +24,11 @@ class Card {
     const divHtml = document.createElement('div');
     const spanNumero = document.createElement('span');
     const spanmobile = document.createElement('span');
-    const spanLargeur = document.createElement('span');
+    const spanDesktop = document.createElement('span');
 
     spanNumero.textContent = this.numero;
     spanmobile.textContent = this.mobile;
-    spanLargeur.textContent = this.largeur;
+    spanLargeur.textContent = this.desktop;
 
     divHtml.className = 'card flex flex-col items-center justify-center bg-black text-white w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-md';
     spanmobile.className = 'hidden lg:block'
@@ -36,7 +36,7 @@ class Card {
 
     divHtml.appendChild(spanNumero);
     divHtml.appendChild(spanmobile);
-    divHtml.appendChild(spanLargeur);
+    divHtml.appendChild(spanDesktop);
 
     return divHtml;
   }
