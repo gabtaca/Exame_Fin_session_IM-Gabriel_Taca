@@ -10,10 +10,11 @@ class Card {
    * @param {string} mobile 
    * @param {string} desktop 
    */
-  constructor(numero, mobile, desktop) {
+  constructor(numero, mobile, desktop, prenom) {
     this.numero = numero;
     this.mobile = mobile;
     this.largeur = desktop;
+    this.prenom = prenom;
   }
 
   /**
@@ -23,20 +24,24 @@ class Card {
   tohtml(){
     const divHtml = document.createElement('div');
     const spanNumero = document.createElement('span');
-    const spanmobile = document.createElement('span');
+    const spanMobile = document.createElement('span');
     const spanDesktop = document.createElement('span');
+    const spanPrenom = document.createElement('span');
 
     spanNumero.textContent = this.numero;
-    spanmobile.textContent = this.mobile;
-    spanLargeur.textContent = this.desktop;
+    spanMobile.textContent = this.mobile;
+    spanDesktop.textContent = this.desktop;
+    spanPrenom.textContent = this.prenom;
 
-    divHtml.className = 'card flex flex-col items-center justify-center bg-black text-white w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-md';
-    spanmobile.className = 'hidden lg:block'
-    spanLargeur.className = 'lg:hidden'
+    divHtml.classList = 'card flex flex-col items-center justify-center bg-black text-white w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-md';
+    spanMobile.classList = 'hidden lg:block'
+    spanDesktop.classList = 'lg:hidden'
+    spanPrenom.classList = 'text-white'
 
     divHtml.appendChild(spanNumero);
-    divHtml.appendChild(spanmobile);
+    divHtml.appendChild(spanMobile);
     divHtml.appendChild(spanDesktop);
+    divHtml.appendChild(spanPrenom);
 
     return divHtml;
   }
@@ -45,15 +50,15 @@ class Card {
 const cardsContainer = document.getElementById('cards__container');
 
 const cards = [
-  new Card ('1', '300px / 300px', '200px / 200px'),
-  new Card ('2', '300px / 300px', '200px / 200px'),
-  new Card ('3', '300px / 300px', '200px / 200px'),
-  new Card ('4', '300px / 300px', '200px / 200px'),
-  new Card ('5', '300px / 300px', '200px / 200px'),
-  new Card ('6', '300px / 300px', '200px / 200px'),
-  new Card ('7', '300px / 300px', '200px / 200px'),
-  new Card ('8', '300px / 300px', '200px / 200px'),
-  new Card ('9', '300px / 300px', '200px / 200px'),
+  new Card ('1', '300px / 300px', '200px / 200px', 'Garry'),
+  new Card ('2', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('3', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('4', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('5', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('6', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('7', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('8', '300px / 300px', '200px / 200px', 'bob'),
+  new Card ('9', '300px / 300px', '200px / 200px', 'bob'),
 ];
 
 
@@ -64,8 +69,14 @@ cards.forEach(card => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("toggleButton");
+  const toggledisplay = document.getElementById("toggleHidden");
   const body = document.getElementById("body");
   const cards = document.querySelectorAll('.card');
+
+  toggledisplay.addEventListener("click", ( => }
+
+    toggleDisplay
+  ))
 
   toggleButton.addEventListener("click", () => {
     toggleButton.classList.toggle("bg-black");
@@ -79,5 +90,4 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.toggle("bg-pink-500");
     });
   });
-});
 
