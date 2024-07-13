@@ -89,5 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.toggle("bg-black");
       card.classList.toggle("bg-pink-500");
     });
-  });
+    // indentation -0.5
+});
 
